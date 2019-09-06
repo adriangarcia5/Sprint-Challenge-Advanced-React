@@ -2,30 +2,38 @@ import React from 'react';
 import PlayerCard from './PlayerCard';
 import axios from 'axios';
 
- class PlayerList extends React.Component {
+class PlayerList extends React.Component {
     constructor() {
         super();
+        this.state = {
+            playerData: []
+        }
 
-     };
+    };
 
-     componentDidMount() {
+    componentDidMount() {
         axios
         .get('http://localhost:5000/api/players')
         .then(res => {
             console.log(res.data)
+            this.setState({playerData: res.data})
         })
         .catch(err => {
             console.log(err)
         })
     }
 
-     render() {
+    render() {
         return (
-            <div>
-                {/* <PlayerCard /> */}
+            <div className="player-list">
+                <PlayerCard 
+                playerData={this.state.playerData}
+                name={this.state.playerData.name}
+                country={this.state.playerData.country}
+                searches={this.state.playerData.searches}/>
             </div>
         )
     }
 }
 
- export default PlayerList; 
+export default PlayerList;

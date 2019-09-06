@@ -9,7 +9,7 @@
 }
 
 .App-header {
-  background-color: white;
+  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -30,4 +30,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.player-list {
+  display: flex;
+  justify-content: center;
+}
+
+.player-card {
+  border: 1px solid black;
+  margin: 10px 0;
 }
