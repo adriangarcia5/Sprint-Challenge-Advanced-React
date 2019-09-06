@@ -32,6 +32,7 @@
   }
 }
 
+/* Card Styling/basic styles*/
 .App {
   width: 75%;
   display: flex;
@@ -48,4 +49,35 @@
 .player-card {
   border: 1px solid black;
   margin: 10px 0;
+}
+
+
+/* Dark Mode styling */
+
+.dark-mode__toggle {
+  background: red;
+  border-radius: 50px;
+  border: 1px solid black;
+  height: 20px;
+  position: relative;
+  width: 50px;
+}
+
+.toggle {
+  background: dodgerblue;
+  border-radius: 50px;
+  height: 18px;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+  width: 22.5px;
+}
+
+.toggled {
+  left: 20px;
+}
+
+.dark-mode {
+  color: #fff;
+  background-color: #313843;
 }
