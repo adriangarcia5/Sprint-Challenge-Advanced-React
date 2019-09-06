@@ -54,14 +54,6 @@
 
 /* Dark Mode styling */
 
-.dark-mode__toggle {
-  background: red;
-  border-radius: 50px;
-  border: 1px solid black;
-  height: 20px;
-  position: relative;
-  width: 50px;
-}
 
 .toggle {
   background: dodgerblue;
